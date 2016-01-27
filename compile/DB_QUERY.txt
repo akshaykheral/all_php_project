@@ -1,0 +1,35 @@
+CREATE TABLE players (
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+firstname varchar(32) NOT NULL,
+lastname varchar(32),
+state varchar(32) NOT NULL,
+phno int NOT NULL
+) ENGINE=INNODB;
+
+CREATE TABLE output_images (
+imageId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+imageData longblob NOT NULL,
+imageType varchar(32) NOT NULL,
+id int NOT NULL,
+FOREIGN KEY (id) REFERENCES players(id)
+) ENGINE=INNODB;
+
+
+CREATE TABLE candidate (
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+firstname varchar(32) NOT NULL,
+lastname varchar(32) NOT NULL,
+state varchar(32) NOT NULL,
+phno int NOT NULL,
+imageData longblob NOT NULL,
+imageType varchar(32) NOT NULL
+);
+
+
+
+CREATE TABLE output_images (
+imageId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+imageData longblob NOT NULL,
+imageType varchar(32) NOT NULL,
+id int NOT NULL
+) ENGINE=INNODB;

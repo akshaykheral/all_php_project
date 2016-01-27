@@ -1,0 +1,87 @@
+<?php 
+
+				include('php_conn.php');
+				
+				if (isset($_POST['submit'])) 
+				{
+					$firstname   = mysql_real_escape_string(htmlspecialchars($_POST('firstname')));
+					$lastname    = mysql_real_escape_string(htmlspecialchars($_POST('lastname')));
+					$uploadimage = addslashes(file_get_contents($_POST['uploadimage']['tmp_name']));
+
+					$sql = ("INSER INTO details (firstname, lastname, uploadimage) VALUE ('$firstname', '$lastname', '$uploadimage')");
+					$query = mysql_query($sql) or die("<b>Error:</b> Problem on image Insert<br/>" . mysql_error());
+
+					if (isset($query)) 
+					{
+						header("Location: view_data.php");	
+					}
+
+					
+				}
+				else
+				{
+					
+				}
+
+			?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>GNR Form</title>
+	<link rel = "stylesheet" type="text/css" href="Form.css">
+
+</head>
+<body>
+
+<h1>Register an Account</h1><br><br>
+
+<form action="" method="post">
+
+	<strong>First Name:      </strong><input type="text" name="firstname"><br><br>
+	<strong>Last Name:       </strong><input type="text" name="lastname"><br><br>
+	<strong>Image:       </strong><input type="text" name="uploadimage"><br><br>
+	
+<!--	<strong>Upload Image:    </strong><input type="file" name="uploadimage"><br><br> -->
+	<strong>Upload Document: </strong><input type="file" name="uploaddoc"><br><br>
+
+		<div align="center">
+			<input type="submit" name="submit" value="Submit Details">
+			<input type="reset" name="reset" value="Clear Form">
+		</div> 
+	
+
+</form>
+			<?php 
+
+				include('php_conn.php');
+				
+				if (isset($_POST['submit'])) 
+				{
+					$firstname   = mysql_real_escape_string(htmlspecialchars($_POST('firstname')));
+					$lastname    = mysql_real_escape_string(htmlspecialchars($_POST('lastname')));
+					$uploadimage    = mysql_real_escape_string(htmlspecialchars($_POST('uploadimage')));
+				
+				//	$uploadimage = addslashes(file_get_contents($_POST['uploadimage']['tmp_name']));
+
+					$sql = ("INSER INTO details (firstname, lastname, uploadimage) VALUE ('$firstname', '$lastname', '$uploadimage')");
+					$query = mysql_query($sql) or die("<b>Error:</b> Problem on image Insert<br/>" . mysql_error());
+				
+					 
+					
+						header("Location: view_data.php");
+					
+
+					
+				}
+				
+				
+
+			?>
+</body>
+</html>
+
+
