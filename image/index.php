@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <head>
-	<title>Upload an Image</title>
+	<title>GNR Form</title>
+	<link href="css/tooplate_style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body bgcolor="#ccffff">
-<div align="center">
-	<img src="images/banner_index1.jpg" alt="Test Image"><br>
+	<div align="center">
+		<img src="images/banner_index1.jpg" alt="Test Image"><br>
 	</div>
-<td><p class="foot"><marquee behavior=alternate onmouseover="this.stop();" onmouseout="this.start();"><strong>Online Submission Portal</strong></marquee></p></td>
+
+<td>
+	<p class="foot">
+		<marquee behavior=alternate onmouseover="this.stop();" onmouseout="this.start();">
+			<strong>
+				Online Submission Portal
+			</strong>
+		</marquee>
+	</p>
+</td>
 	
 <!--	<div align="center">
 	<form action="view.php" method="POST" name="ss" enctype="multipart/form-data">
@@ -83,7 +94,8 @@
 		<tr>
 			<td>Document Upload</td>
 			<td>:</td>
-			<td><input type="file" name="document" /></td>
+			<td>Document Name: <input type="text" name="doc_name" value="" /></td>
+			<td><input type="file" name="document" value="" /></td>
 		</tr>
 		<tr>
 			<td>
@@ -96,5 +108,16 @@
 				<input type="reset" value="Reset">
 			</div>
 	</form>
+	</div>
+	</div>
+
+	
+<div id="tooplate_copyright_wrapper">
+	<div id="tooplate_copyright">
+	
+    	Managed by © SSB YSA Unit Folks <a href="http://www.csirhrdg.res.in/" target="_blank">CSIR-HRDG</a>
+		
+    </div>
+</div>
 </body>
 </html>
