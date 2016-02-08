@@ -1,0 +1,26 @@
+
+
+#tooplate_footer_wrapper {
+	width: 100%;
+	background: #1f1b1a;
+}
+
+#tooplate_footer {
+	width: 960px;
+	padding: 30px 10px;
+	color: #8b773a;
+	margin: 0 auto;
+}
+
+#tooplate_copyright_wrapper {
+	width: 100%;
+	background: #000000;
+}
+
+#tooplate_copyright {
+	width: 960px;
+	padding: 10px;
+	color: #ffffff;
+	margin: 0 auto;
+	text-align: center;
+}

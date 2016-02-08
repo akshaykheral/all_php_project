@@ -55,7 +55,7 @@
     echo '<td>' . $row['status'] . '</td>';
     echo '<td> <img src=all_image_view.php?id=' . $row["id"] . ' /></td>';
     //echo '<td>' . $row['document'] . '</td>';
-    echo '<td> <a href=http://localhost/temp/' . $row['document'] . ' target=_blank>Doc Link</a> </td>';
+    echo '<td> <a href=http://192.168.250.204/temp/' . $row['document'] . ' target=_blank>Doc Link</a> </td>';
   
 
     echo "</tr>"; 
